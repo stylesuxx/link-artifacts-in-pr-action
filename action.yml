@@ -1,13 +1,13 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Link artifacts in PR'
+description: 'Link some or all artifacts in PR which has triggered workflow'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  whitelist:
+    description: 'artifact names to link in PR'
+    required: false
+    default: "[]"
+  token:
+    description: 'token is required to post comments'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
 runs:
   using: 'node16'
   main: 'dist/index.js'
