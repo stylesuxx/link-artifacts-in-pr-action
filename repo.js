@@ -64,7 +64,7 @@ class Repo {
     }
 
     return (artifactCount > 0) ? body : null;
-  };
+  }
 }
 
 module.exports = Repo;
