@@ -10,14 +10,14 @@ By default all artifacts will be linked. A whitelist can be provided if only a s
 
 ## Usage
 
-You can now consume the action by referencing the v1 branch. This will link all build artifacts:
+You can now consume the action by referencing the v2 branch. This will link all build artifacts:
 
 ```yaml
 comment-action:
   runs-on: ubuntu-latest
   steps:
     - name: Link Artifacts via action
-      uses: stylesuxx/link-artifacts-in-pr-action@v1
+      uses: stylesuxx/link-artifacts-in-pr-action@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -29,7 +29,7 @@ comment-action:
   runs-on: ubuntu-latest
   steps:
     - name: Link Artifacts via action
-      uses: stylesuxx/link-artifacts-in-pr-action@v1
+      uses: stylesuxx/link-artifacts-in-pr-action@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         whitelist: "['link-me']"
